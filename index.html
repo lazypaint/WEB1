@@ -24,45 +24,23 @@
 			  gtag('config', 'G-J7DHQ8SZQ9');
 				</script>
 			<!-- 구글 애널리틱스 기능 끝 -->
-			<!-- 주간야간모드 버튼 기능 함수 -->
-			<script>
-				function nightDayHandler(self){
-					var target = document.querySelector('body');
-					if(this.value === 'night'){
-						target.style.backgroundColor = 'black';
-						target.style.color = 'white';
-						this.value = 'day';
 
-						var alist = document.querySelectorAll('a');
-						var i = 0;
-						while(i < alist.length){
-							alist[i].style.color = 'powderblue';
-							i = i + 1;
-						}
-					} else {
-						target.style.backgroundColor = 'white';
-						target.style.color = 'black';
-						this.value = 'night';
+			<!-- 버튼을 누르면 다크모드와 일반모드로 전환한다-->
+			<input id="changeView" type="button" value="night" onclick="
+			nightDayHandler(this);
+			">
 
-						var alist = document.querySelectorAll('a');
-						var i = 0;
-						while(i < alist.length){
-							alist[i].style.color = 'black';
-							i = i + 1;
-						}
-					}
-				}
-			</script>
+			<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<!-- 주간야간모드 버튼 기능 -->
+			<script src="colors.js"></script>
+
 </head>
 
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/style.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost/style.css"/>
 <body>
 	<header>
 		<h1><a href="index.html">자바스크립트는 어디에나 있다</a></h1>
-		<!-- 버튼을 누르면 다크모드와 일반모드로 전환한다-->
-		<input id="changeView" type="button" value="night" onclick="
-		nightDayHandler(this);
-		">
 	</header>
 	<nav>
 		<ul>
@@ -70,6 +48,7 @@
 			<li><a href="1.html">웹사이트</a></li><br>
 			<li><a href="2.html">애플리케이션</a></li><br>
 			<li><a href="3.html">JS로 만든 게임</a></li><br>
+			<li><a href="ex1.html">예제연습</a></li><br>
 			</h3>
 		</ul>
 	</nav>
@@ -79,27 +58,7 @@
 		<ul><span id="first" class ="js">자바스크립트</span>를 이용해서 멋진 작업물들을 만들어 봅시다</ul>
 		<ul><span class ="js">자바스크립트</span>를 이용해서 멋진 <span>작업물</span>들을 만들어 봅시다</ul>
 		<ul><span class ="js">자바스크립트</span>를 이용해서 멋진 작업물들을 만들어 봅시다</ul>
-<script>
-	document.write('안녕,잘가를 3번 반복합시다');
-	document.write('<li>인사합시다</li>');
-	var i = 0;
-	while (i < 3){
-		document.write('<li>안녕</li>');
-		document.write('<li>잘가</li>');
-		i = i + 1;
-	}
-	document.write('<li>또봐</li>');
 
-</script>
-<script>
-document.write('과일리스트를 출력하고 과일마다 링크를 붙여줍니다');
-var fruits = ['apple', 'banana', 'grape', 'watermelon'];
-var i = 0;
-while(i < fruits.length){
-	document.write('<li><a href="http://a.com/'+fruits[i]+'">'+fruits[i]+'</a></li>');
-	i = i + 1;
-}
-</script>
 	</article>
 			<!--유튜브 동영상 링크-->
 				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
